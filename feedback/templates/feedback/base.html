@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'feedback/css/forms.css' %}">
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+<div style="position: absolute; bottom: 10px; right: 10px; font-style: italic">
+    <h1>Наследовано от base</h1>
+</div>
+</body>
+</html>

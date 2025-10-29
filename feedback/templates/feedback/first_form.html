@@ -1,0 +1,27 @@
+{% extends 'feedback/base.html' %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Первая форма{% endblock %}</title>
+
+</head>
+<body>
+{% block content %}
+<h2>Первая форма</h2>
+<form method="post">
+    {% csrf_token %}
+
+    {% for field in form %}
+        <div class="form-style">
+            {{ field.label_tag }}
+            {{ field.error }}
+            {{ field }}
+        </div>
+    {% endfor %}
+    <button>Отправить</button>
+</form>
+{% endblock %}
+</body>
+</html>

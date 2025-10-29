@@ -1,0 +1,13 @@
+{% extends 'feedback/base.html' %}
+
+{% block content %}
+    <h2>Обзор №{{ feedbackmodel.id }}</h2>
+
+    <ul>
+        <li><h1>{{ feedbackmodel.name }}</h1></li>
+        <li>{{ feedbackmodel.surname }}</li>
+        <li>{{ feedbackmodel.rating }}</li>
+        <li>{{ feedbackmodel.feedback_text }}</li>
+
+    </ul>
+{% endblock %}
